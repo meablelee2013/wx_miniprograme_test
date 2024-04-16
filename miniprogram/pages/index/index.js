@@ -33,8 +33,24 @@ Page({
       console.log(res)
       wx.hideLoading()
     })
-  },
 
+  
+  },
+  //提交表单
+  btnSub(res){
+    wx.showLoading({
+      title: '数据加载中...',
+      mask: true
+    })
+
+    var resValue = res.detail.value;
+    db.collection("demolist").add({
+      data: resValue
+    }).then(res => {
+      console.log(res)
+      wx.hideLoading()
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
