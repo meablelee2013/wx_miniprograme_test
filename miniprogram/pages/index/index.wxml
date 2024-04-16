@@ -1,0 +1,5 @@
+<button type="primary" bind:tap="getData">点击获取数据</button>
+<view wx:for="{{dataObj}}">{{item.title}} - {{item.author}}</view>
+
+-----
+<button type="primary" bind:tap="addData">插入1条数据</button>
